@@ -1,0 +1,5 @@
+spring\micro\brewery\web\model\CustomerDto$CustomerDtoBuilder.class
+spring\micro\brewery\service\CustomerServiceImpl.class
+spring\micro\brewery\service\CustomerService.class
+spring\micro\brewery\web\controller\CustomerController.class
+spring\micro\brewery\web\model\CustomerDto.class
