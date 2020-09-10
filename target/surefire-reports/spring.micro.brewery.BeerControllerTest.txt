@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: spring.micro.brewery.BeerControllerTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 22.255 s <<< FAILURE! - in spring.micro.brewery.BeerControllerTest
+saveBeer  Time elapsed: 1.457 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<201> but was:<400>
+	at spring.micro.brewery.BeerControllerTest.saveBeer(BeerControllerTest.java:55)
+
+updateBeer  Time elapsed: 0.194 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<204> but was:<400>
+	at spring.micro.brewery.BeerControllerTest.updateBeer(BeerControllerTest.java:66)
+

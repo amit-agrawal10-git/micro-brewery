@@ -1,10 +1,14 @@
-E:\Projects\git\micro-brewery\src\main\java\spring\micro\brewery\service\BeerServiceImpl.java
-E:\Projects\git\micro-brewery\src\main\java\spring\micro\brewery\service\CustomerServiceImpl.java
+E:\Projects\git\micro-brewery\src\main\java\spring\micro\brewery\repositories\BeerRepository.java
 E:\Projects\git\micro-brewery\src\main\java\spring\micro\brewery\web\controller\BeerController.java
 E:\Projects\git\micro-brewery\src\main\java\spring\micro\brewery\web\model\CustomerDto.java
 E:\Projects\git\micro-brewery\src\main\java\spring\micro\brewery\BreweryApplication.java
 E:\Projects\git\micro-brewery\src\main\java\spring\micro\brewery\web\model\BeerStyleEnum.java
 E:\Projects\git\micro-brewery\src\main\java\spring\micro\brewery\web\model\BeerDto.java
+E:\Projects\git\micro-brewery\src\main\java\spring\micro\brewery\bootstrap\BeerLoader.java
+E:\Projects\git\micro-brewery\src\main\java\spring\micro\brewery\service\BeerServiceImpl.java
+E:\Projects\git\micro-brewery\src\main\java\spring\micro\brewery\service\CustomerServiceImpl.java
+E:\Projects\git\micro-brewery\src\main\java\spring\micro\brewery\web\controller\MVCExceptionHandler.java
+E:\Projects\git\micro-brewery\src\main\java\spring\micro\brewery\domain\Beer.java
 E:\Projects\git\micro-brewery\src\main\java\spring\micro\brewery\service\CustomerService.java
 E:\Projects\git\micro-brewery\src\main\java\spring\micro\brewery\web\model\BeerPageList.java
 E:\Projects\git\micro-brewery\src\main\java\spring\micro\brewery\service\BeerService.java

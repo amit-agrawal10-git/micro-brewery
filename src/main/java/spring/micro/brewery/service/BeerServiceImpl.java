@@ -2,6 +2,7 @@ package spring.micro.brewery.service;
 
 import org.springframework.stereotype.Service;
 import spring.micro.brewery.web.model.BeerDto;
+import spring.micro.brewery.web.model.BeerStyleEnum;
 
 import java.util.UUID;
 
@@ -11,7 +12,7 @@ public class BeerServiceImpl implements BeerService {
     public BeerDto getBeerById(UUID beerId) {
         return BeerDto.builder().id(UUID.randomUUID())
                 .beerName("Galaxy Cat")
-                //.beerStyle("Pale Ale")
+                .beerStyle(BeerStyleEnum.ALE)
                 .build();
     }
 
