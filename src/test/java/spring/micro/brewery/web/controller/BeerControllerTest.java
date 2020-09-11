@@ -78,16 +78,16 @@ class BeerControllerTest {
                                 .description("UUID of desired beer to get.")
                         ),
                         responseFields(
-                                fields.withPath("id").description("Id of Beer"),
-                                fields.withPath("version").description("Version number"),
-                                fields.withPath("createdDate").description("Date Created"),
-                                fields.withPath("lastModifiedDate").description("Date Updated"),
+                                fields.withPath("id").description("Id of Beer").type(UUID.class),
+                                fields.withPath("version").description("Version number").type(Integer.class),
+                                fields.withPath("createdDate").description("Date Created").ignored(),
+                                fields.withPath("lastModifiedDate").description("Date Updated").ignored(),
                                 fields.withPath("beerName").description("Name of Beer"),
                                 fields.withPath("beerStyle").description("Style of Beer"),
-                                fields.withPath("upc").description("UPC of Beer"),
-                                fields.withPath("price").description("Price of Beer"),
-                                fields.withPath("minOnHand").description("Quantity of Beer"),
-                                fields.withPath("quantityToBrew").description("Quantity to Brew")
+                                fields.withPath("upc").description("UPC of Beer").type(Long.class),
+                                fields.withPath("price").description("Price of Beer").type(BigDecimal.class),
+                                fields.withPath("minOnHand").description("Quantity of Beer").ignored(),
+                                fields.withPath("quantityToBrew").description("Quantity to Brew").ignored()
                                 )
                 ));
     }
@@ -104,16 +104,16 @@ class BeerControllerTest {
                 .andExpect(status().isCreated())
                 .andDo(document("v1/beer-new",
                         requestFields(
-                                fields.withPath("id").ignored().type(JsonFieldType.STRING),
-                                fields.withPath("version").ignored().type(JsonFieldType.NUMBER),
-                                fields.withPath("createdDate").ignored().type(JsonFieldType.STRING),
-                                fields.withPath("minOnHand").ignored().type(JsonFieldType.NUMBER),
-                                fields.withPath("quantityToBrew").ignored().type(JsonFieldType.NUMBER),
-                                fields.withPath("lastModifiedDate").ignored().type(JsonFieldType.STRING),
+                                fields.withPath("id").ignored(),
+                                fields.withPath("version").ignored(),
+                                fields.withPath("createdDate").ignored(),
+                                fields.withPath("minOnHand").ignored(),
+                                fields.withPath("quantityToBrew").ignored(),
+                                fields.withPath("lastModifiedDate").ignored(),
                                 fields.withPath("beerName").description("Name of Beer"),
                                 fields.withPath("beerStyle").description("Style of Beer"),
-                                fields.withPath("upc").description("UPC of Beer").type(JsonFieldType.NUMBER),
-                                fields.withPath("price").description("Price of Beer").type(JsonFieldType.NUMBER)
+                                fields.withPath("upc").description("UPC of Beer"),
+                                fields.withPath("price").description("Price of Beer")
                                 )));
     }
 
