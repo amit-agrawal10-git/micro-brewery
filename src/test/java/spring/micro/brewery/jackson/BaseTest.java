@@ -1,5 +1,6 @@
 package spring.micro.brewery.jackson;
 
+import spring.micro.brewery.bootstrap.BeerLoader;
 import spring.micro.brewery.web.model.BeerDto;
 import spring.micro.brewery.web.model.BeerStyleEnum;
 
@@ -11,7 +12,7 @@ public class BaseTest {
     BeerDto getDto(){
         return BeerDto.builder().beerName("KKK")
                 .beerStyle(BeerStyleEnum.PILSNER)
-                .upc(322L)
+                .upc(BeerLoader.BEER2_UPC)
                 .price(new BigDecimal("235"))
                 .createdDate(OffsetDateTime.now())
                 .lastModifiedDate(OffsetDateTime.now())
