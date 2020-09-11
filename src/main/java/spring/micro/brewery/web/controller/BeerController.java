@@ -23,6 +23,7 @@ public class BeerController {
 
     private final BeerService beerService;
 
+    @Autowired
     public BeerController(BeerService beerService){
         this.beerService = beerService;
     }
