@@ -1,5 +1,6 @@
 package spring.micro.brewery.web.controller;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -19,14 +20,10 @@ import java.util.UUID;
 @RequestMapping("/api/v1/beer")
 @RestController
 @Validated
+@RequiredArgsConstructor
 public class BeerController {
 
     private final BeerService beerService;
-
-    @Autowired
-    public BeerController(BeerService beerService){
-        this.beerService = beerService;
-    }
 
     @GetMapping({"/{beerId}"})
     public ResponseEntity<BeerDto> getBeer(@NotNull @PathVariable("beerId") UUID beerId){
@@ -45,8 +42,7 @@ public class BeerController {
 
     @PutMapping({"/{beerId}"})
     public ResponseEntity handlePut(@NotNull @PathVariable("beerId") UUID beerId,@NotNull @Valid @RequestBody BeerDto beerDto){
-        beerService.updateBeer(beerId, beerDto);
-        return new ResponseEntity(HttpStatus.NO_CONTENT);
+        return new ResponseEntity(beerService.updateBeer(beerId, beerDto),HttpStatus.NO_CONTENT);
     }
 
     @DeleteMapping({"/{beerId}"})
